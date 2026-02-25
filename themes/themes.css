@@ -1,0 +1,279 @@
+/* ===== VARIABLES & THEMES ===== */
+:root {
+    /* Cores Principais - Roxo Educacional */
+    --primary: 276 97% 26%;
+    --primary-light: 276 85% 45%;
+    --primary-dark: 276 97% 17%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Fundos */
+    --background: 270 30% 98%;
+    --foreground: 240 10% 15%;
+    
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+    
+    /* Secundário */
+    --secondary: 270 25% 95%;
+    --secondary-foreground: 276 97% 26%;
+    
+    /* Muted */
+    --muted: 270 20% 94%;
+    --muted-foreground: 240 5% 45%;
+    
+    /* Accent */
+    --accent: 276 40% 92%;
+    --accent-foreground: 276 97% 26%;
+    
+    /* Destrutivo */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Bordas e Input */
+    --border: 270 20% 90%;
+    --input: 270 20% 90%;
+    --ring: 276 85% 45%;
+    
+    /* Raio padrão */
+    --radius: 0.75rem;
+    
+    /* Sidebar */
+    --sidebar-background: 270 25% 97%;
+    --sidebar-foreground: 240 10% 25%;
+    --sidebar-primary: 276 97% 26%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 25% 93%;
+    --sidebar-accent-foreground: 276 97% 26%;
+    --sidebar-border: 270 20% 88%;
+    --sidebar-ring: 276 85% 45%;
+    
+    /* Cores Especiais */
+    --success: 152 69% 40%;
+    --warning: 38 92% 50%;
+    --info: 199 89% 48%;
+    
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, hsl(276 85% 45%) 0%, hsl(276 97% 26%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(270 30% 98% / 0.92) 0%, hsl(270 30% 98% / 0.85) 50%, hsl(276 97% 26% / 0.15) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(276 97% 26% / 0.03) 0%, hsl(276 97% 17% / 0.01) 100%);
+    --gradient-accent: linear-gradient(180deg, hsl(270 30% 98%) 0%, hsl(270 25% 95%) 100%);
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 8px hsl(276 97% 26% / 0.08);
+    --shadow-md: 0 4px 16px hsl(276 97% 26% / 0.12);
+    --shadow-lg: 0 8px 32px hsl(276 97% 26% / 0.16);
+    --shadow-xl: 0 16px 48px hsl(276 97% 26% / 0.2);
+    
+    /* Transições */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease;
+}
+
+.dark {
+    /* Cores Principais - Roxo no Dark */
+    --primary: 276 70% 60%;
+    --primary-light: 276 65% 70%;
+    --primary-dark: 276 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Fundos Dark */
+    --background: 240 10% 8%;
+    --foreground: 270 20% 95%;
+    
+    /* Cards Dark */
+    --card: 240 10% 12%;
+    --card-foreground: 270 20% 95%;
+    
+    /* Popover Dark */
+    --popover: 240 10% 12%;
+    --popover-foreground: 270 20% 95%;
+    
+    /* Secundário Dark */
+    --secondary: 240 8% 18%;
+    --secondary-foreground: 276 70% 60%;
+    
+    /* Muted Dark */
+    --muted: 240 8% 16%;
+    --muted-foreground: 270 10% 60%;
+    
+    /* Accent Dark */
+    --accent: 276 30% 20%;
+    --accent-foreground: 276 70% 70%;
+    
+    /* Destrutivo Dark */
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Bordas Dark */
+    --border: 240 8% 20%;
+    --input: 240 8% 20%;
+    --ring: 276 70% 60%;
+    
+    /* Sidebar Dark */
+    --sidebar-background: 240 10% 10%;
+    --sidebar-foreground: 270 20% 90%;
+    --sidebar-primary: 276 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 276 30% 18%;
+    --sidebar-accent-foreground: 276 70% 70%;
+    --sidebar-border: 240 8% 18%;
+    --sidebar-ring: 276 70% 60%;
+    
+    /* Gradientes Dark */
+    --gradient-primary: linear-gradient(135deg, hsl(276 70% 60%) 0%, hsl(276 70% 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 8% / 0.95) 0%, hsl(240 10% 8% / 0.88) 50%, hsl(276 70% 45% / 0.2) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(276 70% 60% / 0.05) 0%, hsl(276 70% 45% / 0.02) 100%);
+    --gradient-accent: linear-gradient(180deg, hsl(240 10% 10%) 0%, hsl(240 8% 14%) 100%);
+    
+    /* Sombras Dark */
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --shadow-xl: 0 16px 48px hsl(0 0% 0% / 0.6);
+}
+
+/* ===== TEMA PARA DALTÔNICOS (LARANJA/MARROM) ===== */
+[data-theme="colorblind-friendly"] {
+    --primary-h: 25;
+    --primary-s: 76%;
+    --primary-l: 31%;
+    
+    --primary: var(--primary-h) var(--primary-s) var(--primary-l);
+    --primary-dark: 25 52% 26%;
+    --primary-light: 25 52% 39%;
+    --secondary: 232 27% 26%;
+    --dark: 240 28% 7%;
+    --light: 0 0% 100%;
+    --background: var(--light);
+    --foreground: var(--dark);
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 25 76% 31%;
+    --accent-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 25 76% 31%;
+}
+
+[data-theme="colorblind-friendly"][data-theme-mode="dark"] {
+    --background: 25 40% 5%;
+    --foreground: 45 30% 90%;
+    --card: 25 30% 10%;
+    --card-foreground: 45 30% 90%;
+    --primary: 25 52% 55%;
+    --primary-dark: 25 40% 40%;
+    --primary-light: 25 52% 65%;
+    --secondary: 232 27% 26%;
+    --muted: 25 25% 15%;
+    --muted-foreground: 25 20% 65%;
+    --accent: 25 52% 55%;
+    --accent-foreground: 0 0% 100%;
+    --border: 25 25% 20%;
+    --input: 25 25% 15%;
+    --ring: 25 52% 55%;
+}
+
+/* ===== TEMA VERDE/ACESSÍVEL ===== */
+[data-theme="accessible-green"] {
+    --primary-h: 142;
+    --primary-s: 76%;
+    --primary-l: 28%;
+    
+    --primary: var(--primary-h) var(--primary-s) var(--primary-l);
+    --primary-dark: 142 76% 20%;
+    --primary-light: 142 76% 36%;
+    --secondary: 232 27% 26%;
+    --dark: 240 28% 7%;
+    --light: 0 0% 100%;
+    --background: var(--light);
+    --foreground: var(--dark);
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --muted: 142 40% 96%;
+    --muted-foreground: 142 20% 40%;
+    --accent: 142 76% 28%;
+    --accent-foreground: 0 0% 100%;
+    --border: 142 30% 85%;
+    --input: 142 30% 95%;
+    --ring: 142 76% 28%;
+}
+
+[data-theme="accessible-green"][data-theme-mode="dark"] {
+    --background: 142 40% 5%;
+    --foreground: 142 30% 90%;
+    --card: 142 30% 8%;
+    --card-foreground: 142 30% 90%;
+    --primary: 142 76% 45%;
+    --primary-dark: 142 76% 35%;
+    --primary-light: 142 76% 55%;
+    --secondary: 232 27% 26%;
+    --muted: 142 30% 12%;
+    --muted-foreground: 142 20% 65%;
+    --accent: 142 76% 45%;
+    --accent-foreground: 0 0% 100%;
+    --border: 142 30% 20%;
+    --input: 142 30% 12%;
+    --ring: 142 76% 45%;
+}
+
+/* Ajustes específicos para elementos nos temas */
+[data-theme="colorblind-friendly"] .hero-accent,
+[data-theme="accessible-green"] .hero-accent {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="colorblind-friendly"] .section-accent,
+[data-theme="accessible-green"] .section-accent {
+    color: hsl(var(--primary));
+}
+
+[data-theme="colorblind-friendly"] .funcionalidade-icon,
+[data-theme="accessible-green"] .funcionalidade-icon {
+    background: hsl(var(--primary));
+}
+
+[data-theme="colorblind-friendly"] .nav-logo,
+[data-theme="accessible-green"] .nav-logo {
+    color: hsl(var(--primary));
+}
+
+[data-theme="colorblind-friendly"] .footer-brand h3,
+[data-theme="accessible-green"] .footer-brand h3 {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Botões nos diferentes temas */
+[data-theme="colorblind-friendly"] .btn-primary,
+[data-theme="accessible-green"] .btn-primary {
+    background: hsl(var(--primary));
+}
+
+[data-theme="colorblind-friendly"] .btn-primary:hover,
+[data-theme="accessible-green"] .btn-primary:hover {
+    background: hsl(var(--primary-light));
+}
+
+[data-theme="colorblind-friendly"] .btn-outline,
+[data-theme="accessible-green"] .btn-outline {
+    color: hsl(var(--primary));
+    border-color: hsl(var(--primary));
+}
+
+[data-theme="colorblind-friendly"] .btn-outline:hover,
+[data-theme="accessible-green"] .btn-outline:hover {
+    background: hsl(var(--primary));
+    color: white;
+}

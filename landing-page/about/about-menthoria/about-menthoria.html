@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Menthoria</title>
+    <meta name="description"
+        content="Conheça a história, missão e valores do Menthoria - Plataforma de educação inclusiva">
+    <meta name="author" content="Menthoria">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&family=Comfortaa:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/../../index.css">
+    <link rel="stylesheet" href="/../../themes/themes.css">
+    <link rel="stylesheet" href="about-menthoria.css">
+
+    <!-- JavaScript -->
+    <script src="/../../index.js" defer></script>
+    <script src="/../../themes/themes.js" defer></script>
+    <script src="about-menthoria.js" defer></script>
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/fav-icon.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-itens">
+                <!-- Logo -->
+                <a href="/index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <span class="logo-text">Menthoria</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="/index.html" class="nav-link">Início</a>
+                    <a href="/landing-page/tools/tools.html" class="nav-link">Ferramentas</a>
+
+                    <!-- Dropdown Sobre -->
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            Sobre
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="about-menthoria.html" class="dropdown-link">
+                                <i class="fas fa-info-circle"></i>
+                                Sobre a Menthoria
+                            </a>
+                            <a href="/landing-page/about/team/team.html" class="dropdown-link">
+                                <i class="fas fa-users"></i>
+                                Nossa Equipe
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="/landing-page/contact/contact.html" class="nav-link">Contato</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <div class="theme-toggle-slider">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </button>
+                    <a href="/login/login.html" class="btn btn-outline btn-sm">Entrar</a>
+                    <a href="/login/login.html" class="btn btn-primary btn-sm">Começar</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="#hero" class="mobile-nav-link">Início</a>
+                <a href="#tools" class="mobile-nav-link">Ferramentas</a>
+                <a href="#about" class="mobile-nav-link">Sobre</a>
+                <a href="#contact" class="mobile-nav-link">Contato</a>
+
+                <div class="mobile-actions">
+                    <button class="theme-toggle mobile-theme" aria-label="Alternar tema">
+                        <div class="theme-toggle-slider">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </button>
+                    <a href="/login/login.html" class="btn btn-outline btn-sm">Entrar</a>
+                    <a href="/login/login.html" class="btn btn-primary btn-sm">Começar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="about-page">
+        <!-- Hero Sobre -->
+        <section class="hero hero-about">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <div class="hero-gradient"></div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="decorative-element decorative-1">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="decorative-element decorative-2">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="decorative-element decorative-3">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Sobre o <span class="text-gradient">Menthoria</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Conheça nossa missão, nossa história e os valores que nos guiam na transformação da educação
+                        inclusiva no Brasil.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#nossa-historia" class="btn btn-primary btn-lg">
+                            <i class="fas fa-scroll"></i>
+                            Nossa História
+                        </a>
+                        <a href="#valores" class="btn btn-outline btn-lg">
+                            <i class="fas fa-heart"></i>
+                            Nossos Valores
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossa História -->
+        <section id="nossa-historia" class="section historia section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-scroll section-icon"></i>
+                        <h2 class="section-title">
+                            Nossa <span class="text-gradient">História</span>
+                        </h2>
+                        <i class="fas fa-scroll section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Da ideia à realização: a jornada do Menthoria na transformação da educação inclusiva
+                    </p>
+                </div>
+
+                <div class="historia-content">
+                    <div class="historia-text">
+                        <h3 class="historia-subtitle">Transformando a Educação Inclusiva desde 2023</h3>
+                        <p class="historia-description">
+                            O Menthoria nasceu da observação das dificuldades enfrentadas por educadores no
+                            acompanhamento de alunos com necessidades especiais. Percebemos a necessidade de uma
+                            ferramenta que realmente atendesse às demandas específicas da educação inclusiva.
+                        </p>
+
+                        <div class="historia-timeline">
+                            <div class="timeline-item animate-fade-in-up delay-100">
+                                <div class="timeline-marker">
+                                    <div class="timeline-year">2023</div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>O Início</h4>
+                                    <p>Identificação da necessidade de uma plataforma especializada para educação
+                                        inclusiva durante pesquisas com educadores.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item animate-fade-in-up delay-200">
+                                <div class="timeline-marker">
+                                    <div class="timeline-year">2024</div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Desenvolvimento</h4>
+                                    <p>Colaboração com educadores, psicólogos e famílias para desenvolver a primeira
+                                        versão da plataforma.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item animate-fade-in-up delay-300">
+                                <div class="timeline-marker">
+                                    <div class="timeline-year">2024</div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Lançamento</h4>
+                                    <p>Lançamento oficial do Menthoria, alcançando rapidamente centenas de educadores em
+                                        todo o Brasil.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="historia-image animate-slide-in-right">
+                        <div class="image-container">
+                            <div class="image-overlay"></div>
+                            <div class="placeholder-image">
+                                <i class="fas fa-history"></i>
+                                <p>Nossa História</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missão, Visão e Valores -->
+        <section id="valores" class="section valores section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-heart section-icon"></i>
+                        <h2 class="section-title">
+                            Missão, Visão e <span class="text-gradient">Valores</span>
+                        </h2>
+                        <i class="fas fa-heart section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Os pilares que guiam nossa jornada na transformação da educação inclusiva
+                    </p>
+                </div>
+
+                <div class="valores-grid">
+                    <!-- Missão -->
+                    <div class="valor-card animate-fade-in-up delay-100">
+                        <div class="valor-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Missão</h3>
+                        <p>Democratizar o acesso à educação de qualidade através de tecnologia acessível, capacitando
+                            educadores e famílias no acompanhamento do desenvolvimento de alunos com deficiência.</p>
+                    </div>
+
+                    <!-- Visão -->
+                    <div class="valor-card animate-fade-in-up delay-200">
+                        <div class="valor-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Visão</h3>
+                        <p>Ser a plataforma de referência em educação inclusiva na América Latina, transformando a
+                            maneira como educadores e famílias acompanham e promovem o desenvolvimento educacional.</p>
+                    </div>
+
+                    <!-- Valores -->
+                    <div class="valor-card animate-fade-in-up delay-300">
+                        <div class="valor-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Valores</h3>
+                        <ul class="valores-lista">
+                            <li><strong>Inclusão:</strong> Educação para todos, sem exceções</li>
+                            <li><strong>Inovação:</strong> Buscar sempre as melhores soluções</li>
+                            <li><strong>Ética:</strong> Transparência e respeito em todas as ações</li>
+                            <li><strong>Colaboração:</strong> Trabalhar em parceria para melhores resultados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Números que Inspiram -->
+        <section class="section numeros section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-chart-line section-icon"></i>
+                        <h2 class="section-title">
+                            Números que <span class="text-gradient">Inspiram</span>
+                        </h2>
+                        <i class="fas fa-chart-line section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        O impacto real do Menthoria na educação inclusiva brasileira
+                    </p>
+                </div>
+
+                <div class="numeros-grid">
+                    <div class="numero-card animate-fade-in-up delay-100">
+                        <div class="numero-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="numero-value" data-count="500">0</div>
+                        <div class="numero-label">Educadores</div>
+                        <p>Transformando suas práticas pedagógicas</p>
+                    </div>
+
+                    <div class="numero-card animate-fade-in-up delay-200">
+                        <div class="numero-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="numero-value" data-count="2000">0</div>
+                        <div class="numero-label">Alunos</div>
+                        <p>Com desenvolvimento acompanhado de perto</p>
+                    </div>
+
+                    <div class="numero-card animate-fade-in-up delay-300">
+                        <div class="numero-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="numero-value" data-count="50">0</div>
+                        <div class="numero-label">Escolas</div>
+                        <p>Implementando educação inclusiva</p>
+                    </div>
+
+                    <div class="numero-card animate-fade-in-up delay-400">
+                        <div class="numero-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="numero-value" data-count="95">0</div>
+                        <div class="numero-label">% Satisfação</div>
+                        <p>Entre famílias e educadores</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por que Escolher o Menthoria -->
+        <section class="section porque-escolher section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-check-circle section-icon"></i>
+                        <h2 class="section-title">
+                            Por que Escolher o <span class="text-gradient">Menthoria</span>
+                        </h2>
+                        <i class="fas fa-check-circle section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Descubra o que nos torna únicos no mercado de educação inclusiva
+                    </p>
+                </div>
+
+                <div class="vantagens-grid">
+                    <div class="vantagem-card animate-fade-in-up delay-100">
+                        <div class="vantagem-icon">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <h3>100% Acessível</h3>
+                        <p>Desenvolvido com as melhores práticas de acessibilidade, garantindo que todos possam usar
+                            nossa plataforma.</p>
+                    </div>
+
+                    <div class="vantagem-card animate-fade-in-up delay-200">
+                        <div class="vantagem-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Segurança Total</h3>
+                        <p>Criptografia de ponta a ponta e protocolos rigorosos de privacidade para proteger os dados
+                            dos alunos.</p>
+                    </div>
+
+                    <div class="vantagem-card animate-fade-in-up delay-300">
+                        <div class="vantagem-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Feito por Especialistas</h3>
+                        <p>Desenvolvido em colaboração com educadores, psicólogos e terapeutas especializados.</p>
+                    </div>
+
+                    <div class="vantagem-card animate-fade-in-up delay-400">
+                        <div class="vantagem-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Inovação Constante</h3>
+                        <p>Evoluímos com base no feedback dos usuários e nas últimas pesquisas em educação inclusiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="cta">
+            <div class="cta-background"></div>
+            <div class="cta-pattern"></div>
+
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Pronto para fazer parte dessa transformação?</h2>
+                    <p class="cta-description">
+                        Junte-se à comunidade Menthoria e descubra como podemos juntos transformar a educação inclusiva
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="/login/login.html" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-rocket"></i>
+                            Começar Gratuitamente
+                        </a>
+                        <a href="/contact/contact.html" class="btn btn-ghost btn-lg">
+                            Falar com Especialista
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-education-notes">
+        <div class="education-note education-note-1">
+            <i class="fas fa-book"></i>
+        </div>
+        <div class="education-note education-note-4">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="/index.html" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span class="logo-text">Menthoria</span>
+                    </a>
+                    <p>Transformando a educação inclusiva através de tecnologia acessível.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Menthoria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

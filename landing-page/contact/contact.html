@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Menthoria</title>
+    <meta name="description"
+        content="Entre em contato com a equipe Menthoria. Estamos aqui para ajudar na transformação da educação inclusiva">
+    <meta name="author" content="Menthoria">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&family=Comfortaa:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="../../themes/themes.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- JavaScript -->
+    <script src="../../index.js" defer></script>
+    <script src="../../themes/themes.js" defer></script>
+    <script src="contact.js" defer></script>
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/fav-icon.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-itens">
+                <!-- Logo -->
+                <a href="/index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <span class="logo-text">Menthoria</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="/index.html" class="nav-link">Início</a>
+                    <a href="/landing-page/tools/tools.html" class="nav-link">Ferramentas</a>
+
+                    <!-- Dropdown Sobre -->
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            Sobre
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/landing-page/about/about-menthoria/about-menthoria.html" class="dropdown-link">
+                                <i class="fas fa-info-circle"></i>
+                                Sobre a Menthoria
+                            </a>
+                            <a href="/landing-page/about/team/team.html" class="dropdown-link">
+                                <i class="fas fa-users"></i>
+                                Nossa Equipe
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="nav-link">Contato</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <div class="theme-toggle-slider">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </button>
+                    <a href="/login/login.html" class="btn btn-outline btn-sm">Entrar</a>
+                    <a href="/login/login.html" class="btn btn-primary btn-sm">Começar</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="#hero" class="mobile-nav-link">Início</a>
+                <a href="#tools" class="mobile-nav-link">Ferramentas</a>
+                <a href="#about" class="mobile-nav-link">Sobre</a>
+                <a href="#contact" class="mobile-nav-link">Contato</a>
+
+                <div class="mobile-actions">
+                    <button class="theme-toggle mobile-theme" aria-label="Alternar tema">
+                        <div class="theme-toggle-slider">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </button>
+                    <a href="/login/login.html" class="btn btn-outline btn-sm">Entrar</a>
+                    <a href="/login/login.html" class="btn btn-primary btn-sm">Começar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <!-- Hero Contato -->
+        <section class="hero hero-contact">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <div class="hero-gradient"></div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="decorative-element decorative-1">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="decorative-element decorative-2">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="decorative-element decorative-3">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Fale <span class="text-gradient">Conosco</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Estamos aqui para ajudar você na transformação da educação inclusiva.
+                        Entre em contato e vamos conversar!
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#formulario" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope"></i>
+                            Enviar Mensagem
+                        </a>
+                        <a href="#canais" class="btn btn-outline btn-lg">
+                            <i class="fas fa-phone-alt"></i>
+                            Outros Canais
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Canais de Contato -->
+        <section id="canais" class="section canais section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-comments section-icon"></i>
+                        <h2 class="section-title">
+                            Nossos <span class="text-gradient">Canais</span>
+                        </h2>
+                        <i class="fas fa-comments section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Escolha a melhor forma de entrar em contato conosco
+                    </p>
+                </div>
+
+                <div class="canais-grid">
+                    <!-- Email -->
+                    <div class="canal-card animate-fade-in-up delay-100">
+                        <div class="canal-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>E-mail</h3>
+                        <p>Nosso canal preferencial para assuntos comerciais e suporte técnico</p>
+                        <div class="canal-info">
+                            <strong>contato@menthoria.com</strong>
+                        </div>
+                        <button class="btn btn-outline btn-canal" data-canal="email">
+                            Enviar E-mail
+                        </button>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="canal-card animate-fade-in-up delay-200">
+                        <div class="canal-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>Atendimento rápido para dúvidas e suporte imediato</p>
+                        <div class="canal-info">
+                            <strong>+55 (11) 99999-9999</strong>
+                        </div>
+                        <button class="btn btn-outline btn-canal" data-canal="whatsapp">
+                            Iniciar Conversa
+                        </button>
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="canal-card animate-fade-in-up delay-300">
+                        <div class="canal-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Telefone</h3>
+                        <p>Atendimento comercial e suporte por telefone</p>
+                        <div class="canal-info">
+                            <strong>+55 (11) 3333-3333</strong>
+                        </div>
+                        <button class="btn btn-outline btn-canal" data-canal="telefone">
+                            Ligar Agora
+                        </button>
+                    </div>
+
+                    <!-- Suporte -->
+                    <div class="canal-card animate-fade-in-up delay-400">
+                        <div class="canal-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Suporte Online</h3>
+                        <p>Chat em tempo real com nossa equipe especializada</p>
+                        <div class="canal-info">
+                            <strong>Disponível 24/7</strong>
+                        </div>
+                        <button class="btn btn-outline btn-canal" data-canal="suporte">
+                            Iniciar Chat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informações de Contato -->
+        <section class="section info-contato section-education-notes">
+            <div class="container">
+                <div class="info-content">
+                    <div class="info-item animate-fade-in-up delay-100">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item animate-fade-in-up delay-200">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Endereço</h4>
+                            <p>Av. Paulista, 1000<br>São Paulo - SP, 01310-100</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item animate-fade-in-up delay-300">
+                        <div class="info-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Tempo de Resposta</h4>
+                            <p>E-mail: até 24 horas<br>WhatsApp: imediato</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Contato -->
+        <section id="formulario" class="section formulario">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-envelope-open section-icon"></i>
+                        <h2 class="section-title">
+                            Envie sua <span class="text-gradient">Mensagem</span>
+                        </h2>
+                        <i class="fas fa-envelope-open section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Preencha o formulário abaixo e nossa equipe entrará em contato o mais breve possível
+                    </p>
+                </div>
+
+                <div class="formulario-container">
+                    <form id="form-contato" class="form-contato" novalidate>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nome" class="form-label">Nome Completo *</label>
+                                <input type="text" id="nome" name="nome" class="form-input"
+                                    placeholder="Seu nome completo" required>
+                                <div class="error-message" id="nome-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail *</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="seu@email.com" required>
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" class="form-input"
+                                    placeholder="(11) 99999-9999">
+                                <div class="error-message" id="telefone-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="assunto" class="form-label">Assunto *</label>
+                                <select id="assunto" name="assunto" class="form-input" required>
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="suporte">Suporte Técnico</option>
+                                    <option value="comercial">Informações Comerciais</option>
+                                    <option value="parceria">Proposta de Parceria</option>
+                                    <option value="sugestao">Sugestão ou Feedback</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                                <div class="error-message" id="assunto-error"></div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="mensagem" class="form-label">Mensagem *</label>
+                                <textarea id="mensagem" name="mensagem" class="form-input form-textarea"
+                                    placeholder="Descreva sua dúvida, sugestão ou proposta..." rows="5"
+                                    required></textarea>
+                                <div class="form-help">
+                                    <span class="contador-caracteres">
+                                        <span id="contador">0</span>/1000 caracteres
+                                    </span>
+                                </div>
+                                <div class="error-message" id="mensagem-error"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Desejo receber novidades e atualizações sobre o
+                                    Menthoria</span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <span class="btn-text">Enviar Mensagem</span>
+                                <span class="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Enviando...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Rápido -->
+        <section class="section faq-rapido section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-question-circle section-icon"></i>
+                        <h2 class="section-title">
+                            Perguntas <span class="text-gradient">Rápidas</span>
+                        </h2>
+                        <i class="fas fa-question-circle section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Respostas para as dúvidas mais comuns
+                    </p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item animate-fade-in-up delay-100">
+                        <div class="faq-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="faq-content">
+                            <h3>Quanto custa o Menthoria?</h3>
+                            <p>Oferecemos uma versão gratuita com funcionalidades essenciais e planos premium a partir
+                                de R$ 29/mês para escolas e instituições.</p>
+                            <a href="/login/login.html" class="btn-link">Ver planos detalhados</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade-in-up delay-200">
+                        <div class="faq-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="faq-content">
+                            <h3>Preciso de treinamento?</h3>
+                            <p>Não! Nossa plataforma é intuitiva e oferecemos tutoriais. Para escolas, disponibilizamos
+                                treinamento personalizado gratuito.</p>
+                            <a href="/about/about.html" class="btn-link">Ver tutoriais</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade-in-up delay-300">
+                        <div class="faq-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="faq-content">
+                            <h3>É seguro para meus alunos?</h3>
+                            <p>Sim! Seguimos a LGPD rigorosamente e utilizamos criptografia de ponta a ponta para
+                                proteger todos os dados.</p>
+                            <a href="/about/about.html" class="btn-link">Ver política de segurança</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade-in-up delay-400">
+                        <div class="faq-icon">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <div class="faq-content">
+                            <h3>Funciona em tablets?</h3>
+                            <p>Sim! O Menthoria é 100% responsivo e funciona perfeitamente em tablets, smartphones e
+                                computadores.</p>
+                            <a href="/tools/tools.html" class="btn-link">Ver compatibilidade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Localização -->
+        <section class="section localizacao">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-map-marked-alt section-icon"></i>
+                        <h2 class="section-title">
+                            Nossa <span class="text-gradient">Localização</span>
+                        </h2>
+                        <i class="fas fa-map-marked-alt section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Venha nos visitar em São Paulo
+                    </p>
+                </div>
+
+                <div class="localizacao-content">
+                    <div class="localizacao-info animate-fade-in-up">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Av. Paulista, 1000<br>Bela Vista, São Paulo - SP<br>CEP: 01310-100</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-subway"></i>
+                            <div>
+                                <h4>Metrô</h4>
+                                <p>Estação Trianon-MASP<br>Linha 2 - Verde</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h4>Estacionamento</h4>
+                                <p>Prédio com estacionamento<br>conveniado no local</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-wheelchair"></i>
+                            <div>
+                                <h4>Acessibilidade</h4>
+                                <p>Totalmente acessível<br>para pessoas com deficiência</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="localizacao-mapa animate-slide-in-right">
+                        <div class="mapa-container">
+                            <div class="mapa-placeholder">
+                                <i class="fas fa-map"></i>
+                                <h3>Mapa Interativo</h3>
+                                <p>Visualize nossa localização no mapa</p>
+                                <button class="btn btn-primary" id="abrir-mapa">
+                                    Abrir Mapa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-background"></div>
+            <div class="cta-pattern"></div>
+
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Pronto para Transformar sua Escola?</h2>
+                    <p class="cta-description">
+                        Agende uma demonstração personalizada e descubra como o Menthoria pode transformar a educação
+                        inclusiva na sua instituição
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-secondary btn-lg" id="agendar-demo">
+                            <i class="fas fa-calendar-alt"></i>
+                            Agendar Demonstração
+                        </button>
+                        <a href="/login/login.html" class="btn btn-ghost btn-lg">
+                            Testar Gratuitamente
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-education-notes">
+        <div class="education-note education-note-1">
+            <i class="fas fa-book"></i>
+        </div>
+        <div class="education-note education-note-4">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="/index.html" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span class="logo-text">Menthoria</span>
+                    </a>
+                    <p>Transformando a educação inclusiva através de tecnologia acessível.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Menthoria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

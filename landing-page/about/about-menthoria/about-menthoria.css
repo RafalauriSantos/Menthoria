@@ -1,0 +1,625 @@
+/* ===== ABOUT PAGE STYLES ===== */
+.hero-about {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover;
+}
+
+.dark .hero-background {
+    background: linear-gradient(135deg, hsl(240 10% 8% / 0.95) 0%, hsl(240 10% 8% / 0.88) 50%, hsl(276 70% 45% / 0.2) 100%) url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover;
+}
+
+/* Historia Section */
+.historia {
+    padding: 5rem 0;
+    background: hsl(var(--background));
+}
+
+.historia-content {
+    display: grid;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (min-width: 1024px) {
+    .historia-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1023px) {
+    .historia-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.historia-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: hsl(var(--primary));
+}
+
+.historia-description {
+    color: hsl(var(--muted-foreground));
+    margin-bottom: 2rem;
+    line-height: 1.75;
+}
+
+/* Timeline */
+.historia-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.historia-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: hsl(var(--primary) / 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+}
+
+.timeline-year {
+    width: 2rem;
+    height: 2rem;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-content {
+    padding-left: 1rem;
+}
+
+.timeline-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: hsl(var(--primary));
+}
+
+.timeline-content p {
+    color: hsl(var(--muted-foreground));
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* Historia Image */
+.historia-image .image-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-strong);
+    height: 400px;
+}
+
+.historia-image .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--primary-dark) / 0.05));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: hsl(var(--muted-foreground));
+    font-family: 'Montserrat', sans-serif;
+}
+
+.historia-image .placeholder-image i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: hsl(var(--primary) / 0.3);
+}
+
+/* Valores Section */
+.valores {
+    padding: 5rem 0;
+    background: hsl(var(--muted) / 0.3);
+}
+
+.valores-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .valores-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.valor-card {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-top: 4px solid hsl(var(--primary));
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-lg);
+}
+
+.valor-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.valor-card:hover .valor-icon {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+.valor-icon i {
+    color: hsl(var(--primary-foreground));
+    font-size: 2rem;
+}
+
+.valor-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: hsl(var(--primary));
+    margin-bottom: 1rem;
+}
+
+.valor-card p {
+    color: hsl(var(--muted-foreground));
+    font-size: 0.875rem;
+    line-height: 1.625;
+    margin-bottom: 0;
+}
+
+.valores-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.valores-lista li {
+    padding: 0.5rem 0;
+    color: hsl(var(--muted-foreground));
+    line-height: 1.5;
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+.valores-lista li:last-child {
+    border-bottom: none;
+}
+
+.valores-lista strong {
+    color: hsl(var(--foreground));
+}
+
+/* Números Section */
+.numeros {
+    padding: 5rem 0;
+    background: hsl(var(--background));
+}
+
+.numeros-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .numeros-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .numeros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .numeros-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.numero-card {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-top: 4px solid hsl(var(--primary));
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.numero-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-lg);
+}
+
+.numero-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.numero-card:hover .numero-icon {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+.numero-icon i {
+    color: hsl(var(--primary-foreground));
+    font-size: 1.5rem;
+}
+
+.numero-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: hsl(var(--primary));
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.numero-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: hsl(var(--foreground));
+}
+
+.numero-card p {
+    color: hsl(var(--muted-foreground));
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Por que Escolher Section */
+.porque-escolher {
+    padding: 5rem 0;
+    background: hsl(var(--muted) / 0.3);
+}
+
+.vantagens-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .vantagens-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .vantagens-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .vantagens-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.vantagem-card {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-top: 4px solid hsl(var(--primary));
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.vantagem-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-lg);
+}
+
+.vantagem-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.vantagem-card:hover .vantagem-icon {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+.vantagem-icon i {
+    color: hsl(var(--primary-foreground));
+    font-size: 1.5rem;
+}
+
+.vantagem-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: hsl(var(--primary));
+    margin-bottom: 0.75rem;
+}
+
+.vantagem-card p {
+    color: hsl(var(--muted-foreground));
+    font-size: 0.875rem;
+    line-height: 1.625;
+    margin: 0;
+}
+
+/* Responsividade Geral */
+@media (max-width: 768px) {
+    .hero-about {
+        min-height: 60vh;
+    }
+    
+    .historia,
+    .valores,
+    .numeros,
+    .porque-escolher {
+        padding: 3rem 0;
+    }
+    
+    .historia-timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-marker {
+        left: -2rem;
+    }
+    
+    .valor-card,
+    .numero-card,
+    .vantagem-card {
+        padding: 1.5rem;
+    }
+    
+    .numero-value {
+        font-size: 2rem;
+    }
+}
+
+/* Animações */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out forwards;
+}
+
+/* Estilos para botões que estavam faltando */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: calc(var(--radius) - 4px);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    outline: none;
+    text-decoration: none;
+    height: 2.5rem;
+    padding: 0 1rem;
+}
+
+.btn:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+}
+
+.btn-primary:hover {
+    background-color: hsl(var(--primary) / 0.9);
+}
+
+.btn-outline {
+    border: 1px solid hsl(var(--input));
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+
+.btn-outline:hover {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+}
+
+.btn-lg {
+    height: 2.75rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+}
+
+/* Estilos para section que estavam faltando */
+.section {
+    padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: 4rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding: 5rem 0;
+    }
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-icon {
+    font-size: 1.5rem;
+    color: hsl(var(--primary));
+}
+
+.section-title {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.25rem;
+    }
+}
+
+.section-description {
+    color: hsl(var(--muted-foreground));
+    max-width: 48rem;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.section-education-notes {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animações para números */
+@keyframes count-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.numero-animado {
+    animation: count-up 0.6s ease-out forwards;
+}
+
+/* Estados de hover melhorados */
+.valor-card,
+.numero-card,
+.vantagem-card {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.valor-card.animate-fade-in-up,
+.numero-card.animate-fade-in-up,
+.vantagem-card.animate-fade-in-up {
+    animation: fade-in-up 0.6s ease forwards;
+}
+
+/* Acessibilidade */
+.valor-card:focus,
+.numero-card:focus,
+.vantagem-card:focus {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 4px;
+}
+
+/* Delays para animação em cascata */
+.valor-card:nth-child(1) { animation-delay: 0.1s; }
+.valor-card:nth-child(2) { animation-delay: 0.2s; }
+.valor-card:nth-child(3) { animation-delay: 0.3s; }
+
+.numero-card:nth-child(1) { animation-delay: 0.1s; }
+.numero-card:nth-child(2) { animation-delay: 0.2s; }
+.numero-card:nth-child(3) { animation-delay: 0.3s; }
+.numero-card:nth-child(4) { animation-delay: 0.4s; }
+
+.vantagem-card:nth-child(1) { animation-delay: 0.1s; }
+.vantagem-card:nth-child(2) { animation-delay: 0.2s; }
+.vantagem-card:nth-child(3) { animation-delay: 0.3s; }
+.vantagem-card:nth-child(4) { animation-delay: 0.4s; }

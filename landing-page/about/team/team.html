@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Equipe | Menthoria</title>
+    <meta name="description"
+        content="Conheça a equipe por trás do Menthoria - profissionais apaixonados por educação inclusiva">
+    <meta name="author" content="Menthoria">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&family=Comfortaa:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/../../index.css">
+    <link rel="stylesheet" href="/../../themes/themes.css">
+    <link rel="stylesheet" href="team.css">
+
+    <!-- JavaScript -->
+    <script src="/../../index.js" defer></script>
+    <script src="/../../themes/themes.js" defer></script>
+    <script src="team.js" defer></script>
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/fav-icon.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-itens">
+                <!-- Logo -->
+                <a href="/index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <span class="logo-text">Menthoria</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="/index.html" class="nav-link">Início</a>
+                    <a href="/landing-page/tools/tools.html" class="nav-link">Ferramentas</a>
+
+                    <!-- Dropdown Sobre -->
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            Sobre
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/landing-page/about/about-menthoria/about-menthoria.html" class="dropdown-link">
+                                <i class="fas fa-info-circle"></i>
+                                Sobre a Menthoria
+                            </a>
+                            <a href="team.html" class="dropdown-link">
+                                <i class="fas fa-users"></i>
+                                Nossa Equipe
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="/landing-page/contact/contact.html" class="nav-link">Contato</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <div class="theme-toggle-slider">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </button>
+                    <a href="/login/login.html" class="btn btn-outline btn-sm">Entrar</a>
+                    <a href="/login/login.html" class="btn btn-primary btn-sm">Começar</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="#hero" class="mobile-nav-link">Início</a>
+                <a href="#tools" class="mobile-nav-link">Ferramentas</a>
+                <a href="#about" class="mobile-nav-link">Sobre</a>
+                <a href="#contact" class="mobile-nav-link">Contato</a>
+
+                <div class="mobile-actions">
+                    <button class="theme-toggle mobile-theme" aria-label="Alternar tema">
+                        <div class="theme-toggle-slider">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </button>
+                    <a href="/login/login.html" class="btn btn-outline btn-sm">Entrar</a>
+                    <a href="/login/login.html" class="btn btn-primary btn-sm">Começar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="teams-page">
+        <!-- Hero Equipe -->
+        <section class="hero hero-teams">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <div class="hero-gradient"></div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="decorative-element decorative-1">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="decorative-element decorative-2">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="decorative-element decorative-3">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Nossa <span class="text-gradient">Equipe</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Conheça os profissionais apaixonados por educação inclusiva que fazem o Menthoria acontecer.
+                        Juntos, transformamos vidas através da tecnologia e educação.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#equipe" class="btn btn-primary btn-lg">
+                            <i class="fas fa-users"></i>
+                            Conheça a Equipe
+                        </a>
+                        <a href="#valores" class="btn btn-outline btn-lg">
+                            <i class="fas fa-heart"></i>
+                            Nossa Cultura
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossa Missão -->
+        <section class="section missao section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-bullseye section-icon"></i>
+                        <h2 class="section-title">
+                            Por Que <span class="text-gradient">Fazemos Isso</span>
+                        </h2>
+                        <i class="fas fa-bullseye section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Acreditamos que toda criança merece uma educação de qualidade, independentemente de suas
+                        habilidades ou condições. Nossa equipe trabalha incansavelmente para tornar essa visão uma
+                        realidade.
+                    </p>
+                </div>
+
+                <div class="missao-content">
+                    <div class="missao-text animate-fade-in-up">
+                        <h3>Paixão por Transformar Vidas</h3>
+                        <p>
+                            Cada membro da nossa equipe compartilha uma paixão genuína por educação inclusiva. Viemos
+                            de diferentes áreas - educação, tecnologia, psicologia, design - mas temos um objetivo em
+                            comum: criar uma plataforma que realmente faça a diferença na vida de educadores, famílias
+                            e,
+                            principalmente, dos alunos.
+                        </p>
+
+                        <div class="estatisticas">
+                            <div class="estatistica">
+                                <div class="numero" data-count="100">0</div>
+                                <div class="label">% Comprometidos</div>
+                            </div>
+                            <div class="estatistica">
+                                <div class="numero" data-count="5">0</div>
+                                <div class="label">Anos de Experiência</div>
+                            </div>
+                            <div class="estatistica">
+                                <div class="numero" data-count="15">0</div>
+                                <div class="label">Especialistas</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="missao-imagem animate-slide-in-right">
+                        <div class="image-container">
+                            <div class="image-overlay"></div>
+                            <div class="placeholder-image">
+                                <i class="fas fa-users-cog"></i>
+                                <p>Equipe Multidisciplinar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Equipe Principal -->
+        <section class="section equipe-principal section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-code section-icon"></i>
+                        <h2 class="section-title">
+                            Equipe de <span class="text-gradient">Desenvolvimento</span>
+                        </h2>
+                        <i class="fas fa-code section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Os desenvolvedores full-stack que transformam nossa visão em realidade, criando a plataforma
+                        que está revolucionando a educação inclusiva no Brasil.
+                    </p>
+                </div>
+
+                <div class="equipe-grid-desenvolvimento">
+                    <!-- Felipe Gustavo Bieco -->
+                    <div class="dev-card animate-fade-in-up delay-100">
+                        <div class="dev-avatar">
+                            <div class="avatar-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQGJUdFrnyy_5A/profile-displayphoto-scale_200_200/B56ZoM9YtzHQAY-/0/1761154012112?e=1772668800&v=beta&t=SK-_zhqYyXowexnxDJNedyP8rmB4KQc-IHzC9pl1bEE"
+                                    alt="Felipe Gustavo Bieco" loading="lazy">
+                                <div class="avatar-overlay">
+                                    <div class="avatar-badge">Dev Full-Stack</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dev-info">
+                            <h3 class="dev-nome">Felipe Gustavo Bieco</h3>
+                            <span class="dev-cargo">Desenvolvedor Full-Stack</span>
+                            <p class="dev-descricao">
+                                Especialista em desenvolvimento web moderno, otimização de performance e arquitetura
+                                de sistemas escaláveis. Responsável pela integração frontend-backend e performance da
+                                plataforma.
+                            </p>
+
+                            <div class="dev-links">
+                                <a href="https://www.linkedin.com/in/felipe-bieco-879893324/" target="_blank"
+                                    class="dev-link linkedin" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/felipotsz/" target="_blank" class="dev-link github"
+                                    aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kayke de Farias Delgado -->
+                    <div class="dev-card animate-fade-in-up delay-200">
+                        <div class="dev-avatar">
+                            <div class="avatar-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQH77ZW72B8r7Q/profile-displayphoto-scale_200_200/B4EZoTVLkdHMAY-/0/1761260911436?e=1772668800&v=beta&t=yWm4ZmQHFsjbE06ZxuQupZjY4bo6RN-7R9VQB7Gdc_8"
+                                    alt="Kayke de Farias Delgado" loading="lazy">
+                                <div class="avatar-overlay">
+                                    <div class="avatar-badge">Dev Full-Stack</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dev-info">
+                            <h3 class="dev-nome">Kayke de Farias Delgado</h3>
+                            <span class="dev-cargo">Desenvolvedor Full-Stack</span>
+                            <p class="dev-descricao">
+                                Focado em soluções inovadoras e experiência do usuário. Especialista em criar interfaces
+                                intuitivas e funcionalidades que realmente atendem às necessidades dos educadores.
+                            </p>
+
+                            <div class="dev-links">
+                                <a href="https://www.linkedin.com/in/kayke-delgado-681a1b335/" target="_blank"
+                                    class="dev-link linkedin" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/NinjaMaster14" target="_blank" class="dev-link github"
+                                    aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rafael Lauri Moraes Santos -->
+                    <div class="dev-card animate-fade-in-up delay-300">
+                        <div class="dev-avatar">
+                            <div class="avatar-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D4D35AQGR5UfDO7xUaQ/profile-framedphoto-shrink_200_200/B4DZsSM7wwJIAY-/0/1765536939441?e=1771524000&v=beta&t=X2H4StAorqV8k-ea2T_BROipd02fSQbRZl-dZBDeoiw"
+                                    alt="Rafael Lauri Moraes Santos" loading="lazy">
+                                <div class="avatar-overlay">
+                                    <div class="avatar-badge">Dev Full-Stack</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dev-info">
+                            <h3 class="dev-nome">Rafael Lauri Moraes Santos</h3>
+                            <span class="dev-cargo">Desenvolvedor Full-Stack</span>
+                            <p class="dev-descricao">
+                                Especialista em arquitetura de software e soluções escaláveis. Responsável pela
+                                estrutura
+                                técnica robusta que garante a confiabilidade e segurança da plataforma Menthoria.
+                            </p>
+
+                            <div class="dev-links">
+                                <a href="https://www.linkedin.com/in/rafael-lauri-moraes-santos-717773186/"
+                                    target="_blank" class="dev-link linkedin" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/RafalauriSantos" target="_blank" class="dev-link github"
+                                    aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refael Santos Silveira -->
+                    <div class="dev-card animate-fade-in-up delay-400">
+                        <div class="dev-avatar">
+                            <div class="avatar-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQEFGG4QvC3VUQ/profile-displayphoto-shrink_200_200/B56ZbFnmKSGoAg-/0/1747072215264?e=1772668800&v=beta&t=snlrBVLAUUzRc8V_Tjjns2dwL5mh3w39KbBfpvk0vyQ"
+                                    alt="Refael Santos Silveira" loading="lazy">
+                                <div class="avatar-overlay">
+                                    <div class="avatar-badge">Dev Full-Stack</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dev-info">
+                            <h3 class="dev-nome">Refael Santos Silveira</h3>
+                            <span class="dev-cargo">Desenvolvedor Full-Stack</span>
+                            <p class="dev-descricao">
+                                Expert em desenvolvimento full-stack e metodologias ágeis. Responsável por implementar
+                                features complexas de forma eficiente, sempre seguindo as melhores práticas de
+                                desenvolvimento.
+                            </p>
+
+                            <div class="dev-links">
+                                <a href="https://www.linkedin.com/in/rafael-silveira-0a5537355/" target="_blank"
+                                    class="dev-link linkedin" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/Rafaelz1" target="_blank" class="dev-link github"
+                                    aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Tecnologias -->
+        <section class="section tecnologias section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-cogs section-icon"></i>
+                        <h2 class="section-title">
+                            Tecnologias <span class="text-gradient">Utilizadas</span>
+                        </h2>
+                        <i class="fas fa-cogs section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        As ferramentas e tecnologias modernas que nossa equipe domina para criar uma plataforma robusta,
+                        segura e escalável para a educação inclusiva.
+                    </p>
+                </div>
+
+                <div class="tecnologias-grid">
+                    <div class="tecnologia-card animate-fade-in-up delay-100">
+                        <div class="tecnologia-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3>Frontend</h3>
+                        <ul class="tecnologia-lista">
+                            <li>React 18</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>React Router</li>
+                        </ul>
+                    </div>
+
+                    <div class="tecnologia-card animate-fade-in-up delay-200">
+                        <div class="tecnologia-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h3>Backend</h3>
+                        <ul class="tecnologia-lista">
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>PostgreSQL</li>
+                            <li>Prisma ORM</li>
+                        </ul>
+                    </div>
+
+                    <div class="tecnologia-card animate-fade-in-up delay-300">
+                        <div class="tecnologia-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Segurança</h3>
+                        <ul class="tecnologia-lista">
+                            <li>JWT Authentication</li>
+                            <li>HTTPS/SSL</li>
+                            <li>Data Encryption</li>
+                            <li>Rate Limiting</li>
+                        </ul>
+                    </div>
+
+                    <div class="tecnologia-card animate-fade-in-up delay-400">
+                        <div class="tecnologia-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>DevOps</h3>
+                        <ul class="tecnologia-lista">
+                            <li>Docker</li>
+                            <li>GitHub Actions</li>
+                            <li>AWS/GCP</li>
+                            <li>CI/CD Pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Especialistas -->
+        <section class="section especialistas section-education-notes">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-graduation-cap section-icon"></i>
+                        <h2 class="section-title">
+                            Especialistas em <span class="text-gradient">Educação</span>
+                        </h2>
+                        <i class="fas fa-graduation-cap section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Profissionais que garantem a excelência pedagógica do Menthoria
+                    </p>
+                </div>
+
+                <div class="especialistas-grid">
+                    <div class="especialista-card animate-fade-in-up delay-100">
+                        <div class="especialista-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Pedagogia Inclusiva</h3>
+                        <p>Professores com experiência prática em sala de aula, garantindo que as ferramentas
+                            atendam às necessidades reais dos educadores.</p>
+                        <ul class="especialista-lista">
+                            <li>Dra. Carla Rodrigues</li>
+                            <li>Prof. Marcos Andrade</li>
+                            <li>Esp. Juliana Costa</li>
+                        </ul>
+                    </div>
+
+                    <div class="especialista-card animate-fade-in-up delay-200">
+                        <div class="especialista-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Psicologia Educacional</h3>
+                        <p>Especialistas em desenvolvimento infantil e aprendizagem, focados nas necessidades
+                            específicas de cada faixa etária e condição.</p>
+                        <ul class="especialista-lista">
+                            <li>Dra. Sofia Martins</li>
+                            <li>Esp. Rodrigo Lima</li>
+                            <li>Msc. Ana Beatriz</li>
+                        </ul>
+                    </div>
+
+                    <div class="especialista-card animate-fade-in-up delay-300">
+                        <div class="especialista-icon">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <h3>Acessibilidade</h3>
+                        <p>Especialistas em tecnologias assistivas e design universal, garantindo que o Menthoria
+                            seja acessível para todos os usuários.</p>
+                        <ul class="especialista-lista">
+                            <li>Esp. Lucas Santos</li>
+                            <li>Msc. Beatriz Oliveira</li>
+                            <li>Tec. Marcelo Silva</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossa Cultura -->
+        <section id="valores" class="section cultura">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-content">
+                        <i class="fas fa-heart section-icon"></i>
+                        <h2 class="section-title">
+                            Nossa <span class="text-gradient">Cultura</span>
+                        </h2>
+                        <i class="fas fa-heart section-icon"></i>
+                    </div>
+                    <p class="section-description">
+                        Os valores que guiam nosso trabalho e nos unem como equipe
+                    </p>
+                </div>
+
+                <div class="cultura-grid">
+                    <div class="valor-cultura animate-fade-in-up delay-100">
+                        <div class="cultura-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Colaboração</h3>
+                        <p>Trabalhamos juntos, respeitando as diferentes expertises e aprendendo constantemente uns
+                            com os outros.</p>
+                    </div>
+
+                    <div class="valor-cultura animate-fade-in-up delay-200">
+                        <div class="cultura-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Inovação</h3>
+                        <p>Incentivamos a criatividade e a busca por soluções novas que realmente transformem a
+                            educação inclusiva.</p>
+                    </div>
+
+                    <div class="valor-cultura animate-fade-in-up delay-300">
+                        <div class="cultura-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Empatia</h3>
+                        <p>Colocamos-nos no lugar dos educadores, famílias e alunos para criar soluções que
+                            realmente façam sentido.</p>
+                    </div>
+
+                    <div class="valor-cultura animate-fade-in-up delay-400">
+                        <div class="cultura-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Responsabilidade</h3>
+                        <p>Assumimos a responsabilidade pelo impacto do nosso trabalho na vida das pessoas que
+                            confiam no Menthoria.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Juntar-se à Equipe -->
+        <section class="section join-team section-education-notes">
+            <div class="container">
+                <div class="join-content">
+                    <div class="join-text animate-fade-in-up">
+                        <h2>Quer Fazer Parte Dessa Jornada?</h2>
+                        <p>
+                            Estamos sempre em busca de pessoas apaixonadas por educação e tecnologia para se juntarem
+                            à nossa equipe. Se você compartilha nossa missão, entre em contato!
+                        </p>
+                        <div class="join-buttons">
+                            <a href="/contact/contact.html" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                Enviar Currículo
+                            </a>
+                            <a href="/contact/contact.html" class="btn btn-outline">
+                                Conhecer Vagas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="join-image animate-slide-in-right">
+                        <div class="image-container">
+                            <div class="image-overlay"></div>
+                            <div class="placeholder-image">
+                                <i class="fas fa-user-plus"></i>
+                                <p>Faça Parte da Nossa Equipe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-background"></div>
+            <div class="cta-pattern"></div>
+
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Conheça Mais Sobre Nosso Trabalho</h2>
+                    <p class="cta-description">
+                        Explore nossas ferramentas e descubra como estamos transformando a educação inclusiva no Brasil
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="/tools/tools.html" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-tools"></i>
+                            Ver Ferramentas
+                        </a>
+                        <a href="/about/about.html" class="btn btn-ghost btn-lg">
+                            Sobre o Menthoria
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-education-notes">
+        <div class="education-note education-note-1">
+            <i class="fas fa-book"></i>
+        </div>
+        <div class="education-note education-note-4">
+            <i class="fas fa-pencil-alt"></i>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="/index.html" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span class="logo-text">Menthoria</span>
+                    </a>
+                    <p>Transformando a educação inclusiva através de tecnologia acessível.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Menthoria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
