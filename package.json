@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "http-server -p 3000 -o -c-1",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:ui": "vitest --ui",
@@ -15,12 +16,13 @@
     "inclusão",
     "acessibilidade"
   ],
-  "author": "Felipotsz",
+  "author": "Felipotsz, Rafael Lauri,Rafael Silveira, Kaiky Gay",
   "license": "MIT",
   "devDependencies": {
-    "vitest": "^1.0.0",
-    "jsdom": "^23.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
     "@vitest/ui": "^1.0.0",
-    "@vitest/coverage-v8": "^1.0.0"
+    "http-server": "^14.1.1",
+    "jsdom": "^23.0.0",
+    "vitest": "^1.0.0"
   }
 }
