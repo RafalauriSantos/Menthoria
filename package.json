@@ -1,0 +1,26 @@
+{
+  "name": "menthoria",
+  "version": "1.0.0",
+  "description": "Menthoria - Educação Inclusiva",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "educação",
+    "inclusão",
+    "acessibilidade"
+  ],
+  "author": "Felipotsz",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^1.0.0",
+    "jsdom": "^23.0.0",
+    "@vitest/ui": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
+  }
+}
