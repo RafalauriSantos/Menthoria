@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     verificarHashURL();
     atualizarAnoFooter();
     
-    console.log('🔐 Sistema de login Menthoria v2.0.0 inicializado');
+    // Inicialização sem logs em produção
 });
 
 // Inicializa os elementos DOM
@@ -171,7 +171,7 @@ function verificarHashURL() {
 function inicializarTema() {
     // Usa o tema do sistema global do Menthoria
     if (window.MenthoriaApp && window.MenthoriaApp.alternarTema) {
-        console.log('🎨 Tema integrado com MenthoriaApp');
+        // Tema integrado com MenthoriaApp
     }
 }
 
@@ -183,11 +183,9 @@ function alternarVisibilidadeSenha(evento) {
 
     if (input.type === 'password') {
         input.type = 'text';
-        icone.className = 'fas fa-eye-slash';
         botao.setAttribute('aria-label', 'Ocultar senha');
     } else {
         input.type = 'password';
-        icone.className = 'fas fa-eye';
         botao.setAttribute('aria-label', 'Mostrar senha');
     }
 }
@@ -329,9 +327,15 @@ function mostrarErroDoCampo(input, mensagem) {
 
     elementoErro.textContent = mensagem;
     elementoErro.id = `error-${input.name || Math.random()}`;
+    elementoErro.setAttribute('role', 'alert');
     input.setAttribute('aria-describedby', elementoErro.id);
 
-    anunciarParaLeitorDeTela(`Erro: ${mensagem}`);
+    // Move foco para o input com erro
+    try { input.focus(); } catch (e) {}
+
+    // Anúncio para leitores de tela (persistente)
+    const announcer = document.getElementById('login-announcer');
+    if (announcer) announcer.textContent = `Erro: ${mensagem}`;
 }
 
 function limparErroDoCampo(evento) {
@@ -356,6 +360,10 @@ function validarEmail(email) {
 async function lidarComLogin(evento) {
     evento.preventDefault();
 
+    // Previne múltiplos envios
+    const botaoEnviar = evento.target.querySelector('button[type="submit"]');
+    if (botaoEnviar && botaoEnviar.disabled) return;
+
     // Valida todos os campos
     const campos = evento.target.querySelectorAll('.form-input');
     let valido = true;
@@ -373,8 +381,8 @@ async function lidarComLogin(evento) {
     }
 
     // Mostra estado de carregamento
-    const botaoEnviar = evento.target.querySelector('button[type="submit"]');
     mostrarCarregamentoBotao(botaoEnviar, true);
+    botaoEnviar.setAttribute('aria-busy', 'true');
 
     try {
         // Simula chamada de API
@@ -390,11 +398,14 @@ async function lidarComLogin(evento) {
         }, 1500);
 
     } catch (erro) {
-        console.error('Erro de login:', erro);
+        // Log condicionado a ambiente dev
+        if (location.hostname === 'localhost') console.error('Erro de login:', erro);
         mostrarErroDoFormulario(evento.target, 'E-mail ou senha incorretos. Tente novamente.');
-        anunciarParaLeitorDeTela('Erro ao fazer login');
+        const announcer = document.getElementById('login-announcer');
+        if (announcer) announcer.textContent = 'Erro ao fazer login';
     } finally {
         mostrarCarregamentoBotao(botaoEnviar, false);
+        botaoEnviar.removeAttribute('aria-busy');
     }
 }
 
@@ -425,7 +436,9 @@ async function lidarComCadastro(evento) {
 
     // Mostra carregamento
     const botaoEnviar = evento.target.querySelector('button[type="submit"]');
+    if (botaoEnviar && botaoEnviar.disabled) return;
     mostrarCarregamentoBotao(botaoEnviar, true);
+    botaoEnviar.setAttribute('aria-busy', 'true');
 
     try {
         await simularChamadaApi(2000);
@@ -439,11 +452,13 @@ async function lidarComCadastro(evento) {
         }, 2000);
 
     } catch (erro) {
-        console.error('Erro de cadastro:', erro);
+        if (location.hostname === 'localhost') console.error('Erro de cadastro:', erro);
         mostrarErroDoFormulario(evento.target, 'Erro ao criar conta. Tente novamente.');
-        anunciarParaLeitorDeTela('Erro ao criar conta');
+        const announcer = document.getElementById('login-announcer');
+        if (announcer) announcer.textContent = 'Erro ao criar conta';
     } finally {
         mostrarCarregamentoBotao(botaoEnviar, false);
+        if (botaoEnviar) botaoEnviar.removeAttribute('aria-busy');
     }
 }
 
@@ -456,10 +471,12 @@ function mostrarCarregamentoBotao(botao, carregando) {
         spanTexto.style.display = 'none';
         spanCarregamento.style.display = 'inline-flex';
         botao.disabled = true;
+        botao.setAttribute('aria-disabled', 'true');
     } else {
         spanTexto.style.display = 'inline';
         spanCarregamento.style.display = 'none';
         botao.disabled = false;
+        botao.removeAttribute('aria-disabled');
     }
 }
 
@@ -471,9 +488,10 @@ function mostrarErroDoFormulario(formulario, mensagem) {
     // Cria nova mensagem
     const divErro = document.createElement('div');
     divErro.className = 'form-error';
+    divErro.setAttribute('role', 'alert');
     divErro.innerHTML = `
-        <i class="fas fa-exclamation-circle"></i>
-        ${mensagem}
+        <svg viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" style="margin-right:.5rem;vertical-align:middle"><path fill="currentColor" d="M11.001 10h2v5h-2zM12 17a1.25 1.25 0 110 2.5A1.25 1.25 0 0112 17z"/></svg>
+        <span>${mensagem}</span>
     `;
 
     formulario.insertBefore(divErro, formulario.firstChild);
@@ -495,10 +513,11 @@ function mostrarNotificacao(mensagem, tipo = 'info') {
     const notificacao = document.createElement('div');
     notificacao.className = `notification-login notification-${tipo}`;
     notificacao.setAttribute('role', 'alert');
-    notificacao.innerHTML = `
-        <i class="fas ${tipo === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-        <span>${mensagem}</span>
-    `;
+    const iconSvg = tipo === 'success'
+        ? '<svg viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" style="margin-right:.5rem;vertical-align:middle"><path fill="currentColor" d="M9.3 16.3L4.7 11.7 3.3 13.1 9.3 19.1 21 7.4 19.6 6z"></path></svg>'
+        : '<svg viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" style="margin-right:.5rem;vertical-align:middle"><path fill="currentColor" d="M11 15h2v2h-2zm0-8h2v6h-2z"/><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path></svg>';
+
+    notificacao.innerHTML = `${iconSvg}<span>${mensagem}</span>`;
 
     document.body.appendChild(notificacao);
 
@@ -517,6 +536,13 @@ function simularChamadaApi(atraso = 1000) {
 }
 
 function anunciarParaLeitorDeTela(mensagem) {
+    // Use announcer region if present, fallback to dynamic element
+    const announcer = document.getElementById('login-announcer');
+    if (announcer) {
+        announcer.textContent = mensagem;
+        return;
+    }
+
     const anuncio = document.createElement('div');
     anuncio.setAttribute('aria-live', 'polite');
     anuncio.setAttribute('aria-atomic', 'true');

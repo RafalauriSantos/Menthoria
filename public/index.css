@@ -70,6 +70,28 @@ h3 {
     padding: 0 1.5rem;
 }
 
+/* Icon helpers for inline SVG replacements */
+.icon {
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+}
+
+.icon svg {
+    width: 1em;
+    height: 1em;
+}
+
+.icon-spin {
+    display: inline-block;
+    animation: menthoria-spin 1s linear infinite;
+}
+
+@keyframes menthoria-spin {
+    to { transform: rotate(360deg); }
+}
+
 @media (min-width: 640px) {
     .container {
         max-width: 640px;

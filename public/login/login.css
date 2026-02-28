@@ -212,6 +212,34 @@
     gap: 0.5rem;
 }
 
+/* Accessibility helper */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Disabled button visual */
+.btn[disabled], .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-error {
+    background: hsl(var(--destructive) / 0.08);
+    border-left: 4px solid hsl(var(--destructive));
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    color: hsl(var(--destructive-foreground));
+    border-radius: 0.25rem;
+}
+
 .form-divider {
     position: relative;
     text-align: center;

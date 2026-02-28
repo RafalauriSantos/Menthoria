@@ -1,0 +1,23 @@
+/* Local fonts placeholder
+   - Add font files under /public/fonts (e.g. Montserrat-Regular.woff2)
+   - Uncomment and update src urls below to self-host Google Fonts if you add files.
+*/
+
+/* Example @font-face (uncomment after adding files)
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Montserrat-Regular.woff2') format('woff2');
+}
+*/
+
+/* System font fallback stack for performance */
+:root {
+  --ui-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+body {
+  font-family: 'Open Sans', var(--ui-font-stack), sans-serif;
+}
