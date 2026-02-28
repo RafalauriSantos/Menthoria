@@ -3,12 +3,13 @@
 ## 📋 VISÃO GERAL
 
 Transformar Menthoria de **site estático** para uma **aplicação profissional full-stack** com:
-- ✅ Backend robusto (Fastify)
-- ✅ Frontend moderno (React)
+- ✅ Backend robusto (Fastify + JavaScript)
+- ✅ Frontend modular (JavaScript Vanilla Componentizado)
 - ✅ Autenticação/Autorização real
 - ✅ Banco de dados
 - ✅ Padrões de mercado
-- ✅ Escalável e manutenível
+- ✅ Escalável e mantenível
+- ✅ Funcional para TCC de curso técnico
 
 ---
 
@@ -16,88 +17,92 @@ Transformar Menthoria de **site estático** para uma **aplicação profissional 
 
 ```
 menthoria/
-├── packages/
-│   ├── backend/
-│   │   ├── src/
-│   │   │   ├── config/
-│   │   │   │   ├── database.ts
-│   │   │   │   ├── environment.ts
-│   │   │   │   └── logger.ts
-│   │   │   ├── models/
-│   │   │   │   ├── User.ts
-│   │   │   │   ├── Student.ts
-│   │   │   │   └── Assessment.ts
-│   │   │   ├── routes/
-│   │   │   │   ├── auth.routes.ts
-│   │   │   │   ├── users.routes.ts
-│   │   │   │   ├── students.routes.ts
-│   │   │   │   └── assessments.routes.ts
-│   │   │   ├── controllers/
-│   │   │   │   ├── AuthController.ts
-│   │   │   │   ├── UserController.ts
-│   │   │   │   └── StudentController.ts
-│   │   │   ├── services/
-│   │   │   │   ├── AuthService.ts
-│   │   │   │   ├── UserService.ts
-│   │   │   │   └── EmailService.ts
-│   │   │   ├── middleware/
-│   │   │   │   ├── auth.middleware.ts
-│   │   │   │   ├── errorHandler.middleware.ts
-│   │   │   │   ├── validation.middleware.ts
-│   │   │   │   └── logging.middleware.ts
-│   │   │   ├── utils/
-│   │   │   │   ├── validators.ts
-│   │   │   │   ├── jwt.ts
-│   │   │   │   └── encryption.ts
-│   │   │   ├── types/
-│   │   │   │   └── index.ts
-│   │   │   └── server.ts
-│   │   ├── tests/
-│   │   │   ├── unit/
-│   │   │   ├── integration/
-│   │   │   └── e2e/
-│   │   ├── .env.example
-│   │   ├── package.json
-│   │   ├── tsconfig.json
-│   │   └── vitest.config.ts
-│   │
-│   └── frontend/
-│       ├── src/
-│       │   ├── components/
-│       │   │   ├── common/
-│       │   │   │   ├── Header.tsx
-│       │   │   │   ├── Footer.tsx
-│       │   │   │   ├── Button.tsx
-│       │   │   │   └── Card.tsx
-│       │   │   ├── layout/
-│       │   │   │   ├── Layout.tsx
-│       │   │   │   └── Sidebar.tsx
-│       │   │   ├── pages/
-│       │   │   │   ├── Home.tsx
-│       │   │   │   ├── Login.tsx
-│       │   │   │   ├── Dashboard.tsx
-│       │   │   │   └── NotFound.tsx
-│       │   │   └── features/
-│       │   │       ├── auth/
-│       │   │       ├── students/
-│       │   │       └── assessments/
-│       │   ├── hooks/
-│       │   │   ├── useAuth.ts
-│       │   │   ├── useApi.ts
-│       │   │   └── useTheme.ts
-│       │   ├── services/
-│       │   │   ├── api.ts
-│       │   │   ├── auth.service.ts
-│       │   │   └── student.service.ts
-│       │   ├── store/ (Zustand/Redux)
-│       │   │   ├── authStore.ts
-│       │   │   ├── themeStore.ts
-│       │   │   └── studentStore.ts
-│       │   ├── types/
-│       │   │   └── index.ts
-│       │   ├── utils/
-│       │   │   ├── validators.ts
-│       │   │   └── formatters.ts
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── database.js
+│   │   │   ├── environment.js
+│   │   │   └── logger.js
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Student.js
+│   │   │   └── Assessment.js
+│   │   ├── routes/
+│   │   │   ├── auth.routes.js
+│   │   │   ├── users.routes.js
+│   │   │   ├── students.routes.js
+│   │   │   └── assessments.routes.js
+│   │   ├── controllers/
+│   │   │   ├── AuthController.js
+│   │   │   ├── UserController.js
+│   │   │   └── StudentController.js
+│   │   ├── services/
+│   │   │   ├── AuthService.js
+│   │   │   ├── UserService.js
+│   │   │   └── EmailService.js
+│   │   ├── middleware/
+│   │   │   ├── auth.middleware.js
+│   │   │   ├── errorHandler.middleware.js
+│   │   │   ├── validation.middleware.js
+│   │   │   └── logging.middleware.js
+│   │   ├── utils/
+│   │   │   ├── validators.js
+│   │   │   ├── jwt.js
+│   │   │   └── encryption.js
+│   │   └── server.js
+│   ├── tests/
+│   │   ├── unit/
+│   │   ├── integration/
+│   │   └── e2e/
+│   ├── .env.example
+│   ├── package.json
+│   └── vitest.config.js
+│
+├── login/
+│   ├── components/
+│   │   ├── LoginForm.js
+│   │   ├── RegisterForm.js
+│   │   └── ForgotPassword.js
+│   ├── services/
+│   │   ├── api.js
+│   │   └── auth.service.js
+│   ├── utils/
+│   │   └── validators.js
+│   ├── login.html
+│   ├── login.css
+│   └── login.js
+│
+├── landing-page/
+│   ├── home/
+│   │   ├── components/
+│   │   │   ├── Hero.js
+│   │   │   ├── Features.js
+│   │   │   └── Testimonials.js
+│   │   ├── home.html
+│   │   ├── home.css
+│   │   └── home.js
+│   ├── about/
+│   ├── contact/
+│   └── tools/
+│
+├── themes/
+│   ├── themes.css
+│   └── themes.js
+│
+├── __tests__/
+│   ├── accessibility.test.js
+│   ├── constants.test.js
+│   └── dom.test.js
+│
+├── docs/
+│   ├── API.md
+│   ├── ARCHITECTURE.md
+│   └── SETUP.md
+│
+├── package.json
+├── vitest.config.js
+└── .env.example
+```
 │       │   ├── styles/
 │       │   │   ├── globals.css
 │       │   │   ├── variables.css
@@ -130,39 +135,46 @@ menthoria/
 
 ## 🛠️ STACK TÉCNICO RECOMENDADO
 
-### Backend
+### Backend (Fastify + JavaScript)
 ```json
 {
-  "Fastify": "v4.x - Framework robusto HTTP",
-  "TypeScript": "Tipagem estática",
-  "PostgreSQL": "Banco de dados relacional",
-  "Prisma ORM": "ORM type-safe",
-  "Zod": "Validação de schema",
-  "JWT": "Autenticação",
-  "Bcrypt": "Hash de senhas",
-  "Redis": "Cache e sessões",
-  "Bull": "Fila de tarefas",
-  "Pino": "Logger estruturado",
-  "Jest/Vitest": "Testes",
-  "Docker": "Containerização"
+  "runtime": "Node.js v18+",
+  "framework": "Fastify v4.x - Framework HTTP rápido e leve",
+  "linguagem": "JavaScript (ES6+)",
+  "banco": "PostgreSQL - Banco relacional",
+  "orm": "Prisma - ORM moderno e type-safe",
+  "validacao": "Zod ou Joi - Validação de schemas",
+  "autenticacao": "JWT - JSON Web Tokens",
+  "senha": "Bcrypt - Hash de senhas",
+  "logger": "Pino - Logger estruturado",
+  "testes": "Vitest - Framework de testes",
+  "documentacao": "Swagger/OpenAPI - Documentação de API"
 }
 ```
 
-### Frontend
+### Frontend (JavaScript Vanilla Componentizado)
 ```json
 {
-  "React": "v18.x - UI library",
-  "TypeScript": "Tipagem estática",
-  "Vite": "Build tool rápido",
-  "React Router": "Roteamento",
-  "Zustand/Redux": "State management",
-  "Axios/Fetch": "HTTP client",
-  "Tailwind CSS": "Styling",
-  "React Query": "Data fetching",
-  "Shadcn/UI": "Component library",
-  "Vitest": "Testes unitários",
-  "React Testing Library": "Testes componentes",
-  "Cypress": "Testes E2E"
+  "linguagem": "JavaScript (ES6+)",
+  "arquitetura": "Componentes modulares (estilo React)",
+  "bundler": "Vite - Build tool rápido",
+  "styling": "CSS3 + CSS Variables",
+  "http": "Fetch API nativa",
+  "state": "localStorage + Custom Events",
+  "router": "Navegação nativa (History API)",
+  "testes": "Vitest + DOM Testing Library",
+  "acessibilidade": "Semântica HTML5 + ARIA"
+}
+```
+
+### Infraestrutura
+```json
+{
+  "hospedagem": "Render/Railway/Vercel (plano free)",
+  "banco": "PostgreSQL (Neon/Supabase free tier)",
+  "versionamento": "Git + GitHub",
+  "ci_cd": "GitHub Actions (opcional)",
+  "ambiente": "dotenv - Variáveis de ambiente"
 }
 ```
 
@@ -297,15 +309,16 @@ Padrões:
 ✅ Observer Pattern (eventos)
 ```
 
-### Frontend Architecture
+### Frontend Architecture (JavaScript Vanilla)
 ```
 Padrões:
-✅ Container/Presentational Components
-✅ Custom Hooks
-✅ Context API + useContext
-✅ Compound Components
-✅ Render Props
-✅ Higher-Order Components (HOC)
+✅ Arquitetura Componentizada (modular)
+✅ Event-Driven Architecture
+✅ Custom Elements (web components style)
+✅ Module Pattern
+✅ Observer Pattern (custom events)
+✅ State Management com localStorage
+✅ Routing com History API
 ```
 
 ---
@@ -313,10 +326,10 @@ Padrões:
 ## 🚀 PLANO DE IMPLEMENTAÇÃO
 
 ### FASE 1: Backend Base (2-3 semanas)
-```typescript
-1. Setup Fastify + TypeScript
-   - [ ] Configurar projeto
-   - [ ] Setup de database
+```javascript
+1. Setup Fastify + JavaScript
+   - [ ] Configurar projeto Node.js
+   - [ ] Setup de database (PostgreSQL)
    - [ ] Middleware básico
 
 2. Autenticação
@@ -332,7 +345,7 @@ Padrões:
    - [ ] Seeds
 
 4. Validação
-   - [ ] Zod schemas
+   - [ ] Zod/Joi schemas
    - [ ] Middleware de validação
    - [ ] Error handling
 
@@ -342,36 +355,37 @@ Padrões:
    - [ ] Testes de autenticação
 ```
 
-### FASE 2: React Frontend Base (2-3 semanas)
-```typescript
-1. Setup React + Vite
-   - [ ] Vite project
-   - [ ] TypeScript config
+### FASE 2: Frontend Componentizado (2-3 semanas)
+```javascript
+1. Setup JavaScript Modular
+   - [ ] Estrutura de componentes
+   - [ ] Sistema de build (Vite)
    - [ ] Folder structure
 
 2. Components Base
-   - [ ] Layout components
-   - [ ] Common components
-   - [ ] Component library
+   - [ ] Layout components (Header, Footer)
+   - [ ] Common components (Button, Card, Form)
+   - [ ] Component factory pattern
 
 3. Routing
-   - [ ] React Router setup
+   - [ ] History API setup
    - [ ] Protected routes
    - [ ] 404 page
 
 4. State Management
-   - [ ] Zustand store setup
-   - [ ] Auth store
-   - [ ] Theme store
+   - [ ] localStorage persistence
+   - [ ] Custom Events para comunicação
+   - [ ] Auth state
+   - [ ] Theme state
 
 5. HTTP Client
-   - [ ] Axios configurado
-   - [ ] Interceptors
+   - [ ] Fetch API wrapper
+   - [ ] Request interceptors
    - [ ] Error handling
 ```
 
-### FASE 3: Features (3-4 semanas)
-```typescript
+### FASE 3: Features (2-3 semanas)
+```javascript
 1. Authentication
    - [ ] Login UI
    - [ ] Register UI
@@ -389,25 +403,25 @@ Padrões:
 
 4. Reporting
    - [ ] Student progress reports
-   - [ ] Export to PDF/Excel
+   - [ ] Export to PDF (opcional)
 ```
 
-### FASE 4: DevOps + Deployment (1-2 semanas)
-```typescript
-1. Docker
-   - [ ] Dockerfile backend
-   - [ ] Dockerfile frontend
-   - [ ] docker-compose
+### FASE 4: Testes + Deploy (1-2 semanas)
+```javascript
+1. Testes Completos
+   - [ ] Testes de integração
+   - [ ] Testes E2E básicos
+   - [ ] Coverage > 80%
 
-2. CI/CD
-   - [ ] GitHub Actions
-   - [ ] Automated tests
-   - [ ] Automated builds
+2. Deploy
+   - [ ] Deploy backend (Render/Railway)
+   - [ ] Deploy frontend (Vercel/Netlify)
+   - [ ] Variáveis de ambiente
 
-3. Monitoring
-   - [ ] Error tracking (Sentry)
-   - [ ] Performance monitoring
-   - [ ] Logs centralizados
+3. Documentação
+   - [ ] README completo
+   - [ ] API documentation
+   - [ ] Setup guide
 ```
 
 ---
@@ -420,11 +434,11 @@ Padrões:
 |---------|-------|--------|-------|
 | Segurança | ⚠️ Nenhuma | ✅ JWT + Bcrypt + Validação | Segurança real |
 | Funcionalidade | ⚠️ Estático | ✅ API completa | Escalável |
-| Performance | ⚠️ Inicial | ✅ Cache + optimization | 2-3x mais rápido |
+| Performance | ⚠️ Inicial | ✅ Otimizações | 2x mais rápido |
 | Manutenibilidade | ⚠️ Difícil | ✅ Modular/Componentes | 50% menos bugs |
 | Escalabilidade | ⚠️ Limitada | ✅ Banco de dados | Infinita |
-| Testabilidade | ⚠️ 19 testes | ✅ 200+ testes | Confiança |
-| DevOps | ⚠️ Manual | ✅ CI/CD automático | Deployments rápidos |
+| Testabilidade | ⚠️ 19 testes | ✅ 100+ testes | Confiança |
+| Deploy | ⚠️ Manual | ✅ Simples (Render/Vercel) | Rápido |
 | Documentação | ⚠️ Mínima | ✅ Completa | Onboarding fácil |
 
 ---
@@ -473,20 +487,20 @@ Performance:            ↑ 2-3x (cache, otimização)
 ```
 Frameworks:
 - Fastify: https://www.fastify.io/
-- React: https://react.dev/
 - Prisma: https://www.prisma.io/
-- TypeScript: https://www.typescriptlang.org/
+- Vite: https://vitejs.dev/
+- Vitest: https://vitest.dev/
 
 Boas Práticas:
 - Clean Code: Robert C. Martin
-- Design Patterns: Gang of Four
+- JavaScript Patterns: Addy Osmani
 - Web Security: OWASP Top 10
 - REST API design: restfulapi.net
 
 Ferramentas:
-- Docker: https://www.docker.com/
-- GitHub Actions: https://github.com/features/actions
-- Sentry: https://sentry.io/
+- PostgreSQL: https://www.postgresql.org/
+- GitHub: https://github.com/
+- Render: https://render.com/
 ```
 
 ---

@@ -15,13 +15,12 @@
 - [ ] Criar pasta `/backend`
 - [ ] `npm init -y` na pasta backend
 - [ ] Instalar Fastify
-- [ ] Instalar TypeScript
-- [ ] Configurar tsconfig.json
+- [ ] Configurar ESM (type: "module")
 - [ ] Criar pasta `/src`
 - [ ] Configurar scripts npm (dev, build, start)
 
 ### 1.2 Database
-- [ ] Instalar PostgreSQL localmente (ou via Docker)
+- [ ] Instalar PostgreSQL localmente
 - [ ] Instalar Prisma
 - [ ] Criar `.env` com DATABASE_URL
 - [ ] Criar schema.prisma
@@ -42,7 +41,7 @@
 - [ ] Testes de autenticação
 
 ### 1.4 Validação
-- [ ] Instalar Zod
+- [ ] Instalar Zod ou Joi
 - [ ] Criar validation schemas
 - [ ] Criar validation middleware
 - [ ] Validar inputs em todos endpoints
@@ -68,41 +67,39 @@
 
 ## FASE 2: FRONTEND BASE (Semanas 2-4)
 
-### 2.1 Setup React
-- [ ] Criar pasta `/frontend`
-- [ ] `npm create vite@latest frontend -- --template react-ts`
-- [ ] Instalar dependências
-- [ ] Configurar tsconfig.json
+### 2.1 Setup JavaScript Modular
+- [ ] Estruturar pastas de componentes
+- [ ] Configurar Vite (build tool)
 - [ ] Criar pasta `/src`
-- [ ] Criar pastas: components, pages, hooks, services, store, types, utils, styles
+- [ ] Criar pastas: components, services, utils, styles
+- [ ] Configurar ESM modules
 
 ### 2.2 Styling
-- [ ] Instalar Tailwind CSS
-- [ ] Configurar tailwind.config.js
-- [ ] Criar global styles
 - [ ] Criar CSS variables para tema
+- [ ] Criar global styles
+- [ ] Sistema de cores e tipografia
+- [ ] Grid/Layout system
 - [ ] Componentes base prontos
 
 ### 2.3 Routing
-- [ ] Instalar React Router v6
+- [ ] Implementar History API routing
 - [ ] Criar estrutura de rotas
 - [ ] Página Home
 - [ ] Página Login
 - [ ] Página 404
-- [ ] Protected routes HOC
+- [ ] Protected routes
 - [ ] Redirecionar não autenticados
 
 ### 2.4 State Management
-- [ ] Instalar Zustand
-- [ ] Criar auth store
-- [ ] Criar theme store
-- [ ] Criar student store
+- [ ] Sistema de state com localStorage
+- [ ] Custom Events para comunicação
+- [ ] Auth state management
+- [ ] Theme state
 - [ ] Persistência em localStorage
 - [ ] Sincronização entre abas
 
 ### 2.5 HTTP Client
-- [ ] Instalar Axios
-- [ ] Criar API service
+- [ ] Criar wrapper para Fetch API
 - [ ] Interceptor de autenticação
 - [ ] Interceptor de erro
 - [ ] Retry automático para failures
@@ -118,10 +115,10 @@
 - [ ] Modal component
 
 ### 2.7 Testes Frontend (Fase 1)
-- [ ] Instalar Vitest + React Testing Library
+- [ ] Instalar Vitest + DOM Testing Library
 - [ ] Testes de componentes básicos
-- [ ] Testes de hooks
-- [ ] Testes de store
+- [ ] Testes de utils
+- [ ] Testes de state management
 - [ ] Coverage > 70%
 
 **Critério de aceitação:** UI base funcionando, conectando com backend
@@ -204,14 +201,13 @@
 - [ ] Lighthouse > 90
 
 ### 4.3 Testes Completos
-- [ ] Testes unitários > 85% coverage
+- [ ] Testes unitários > 80% coverage
 - [ ] Testes de integração
-- [ ] Testes E2E (Cypress)
+- [ ] Testes E2E básicos
   - [ ] Login flow
   - [ ] CRUD alunos
   - [ ] Dashboard
-  - [ ] Relatórios
-- [ ] Testes de segurança
+- [ ] Testes de segurança básicos
 - [ ] Testes de performance
 
 ### 4.4 Documentação
@@ -223,16 +219,14 @@
 - [ ] Code style guide
 - [ ] Troubleshooting guide
 
-### 4.5 DevOps
-- [ ] Dockerfile backend
-- [ ] Dockerfile frontend
-- [ ] docker-compose.yml
-- [ ] GitHub Actions CI/CD
-- [ ] Automated tests in CI
-- [ ] Automated builds
-- [ ] Automated deploys
-- [ ] Health checks
-- [ ] Monitoring (Sentry)
+### 4.5 Deploy
+- [ ] Deploy backend (Render/Railway)
+- [ ] Deploy frontend (Vercel/Netlify)
+- [ ] Database em produção (Neon/Supabase)
+- [ ] Variáveis de ambiente configuradas
+- [ ] SSL/HTTPS configurado
+- [ ] Health checks básicos
+- [ ] Monitoring (opcional - Sentry)
 
 ### 4.6 Linting & Formatting
 - [ ] ESLint setup
@@ -250,13 +244,13 @@
 - [ ] Color contrast check
 - [ ] Form testing
 
-### 4.8 Deployment
+### 4.6 Deploy Final
 - [ ] Deploy backend (Render/Railway)
 - [ ] Deploy frontend (Vercel/Netlify)
 - [ ] Database em produção
 - [ ] SSL/HTTPS configurado
-- [ ] Domain setup
-- [ ] Email service (SendGrid/AWS SES)
+- [ ] Domain setup (opcional)
+- [ ] Email service (opcional)
 - [ ] Monitoring live
 - [ ] Rollback strategy
 
@@ -266,67 +260,65 @@
 
 ## 📊 DEPENDÊNCIAS INSTALADAS POR FASE
 
-### Fase 1 - Backend
+### Fase 1 - Backend (Fastify + JavaScript)
 ```json
 {
   "fastify": "^4.0.0",
-  "typescript": "^5.0.0",
-  "@types/node": "^20.0.0",
+  "@fastify/cors": "^8.4.0",
+  "@fastify/jwt": "^7.2.0",
   "prisma": "^5.0.0",
   "@prisma/client": "^5.0.0",
-  "jsonwebtoken": "^9.0.0",
   "bcrypt": "^5.1.0",
   "zod": "^3.22.0",
   "pino": "^8.14.0",
   "dotenv": "^16.3.1",
-  "vitest": "^1.0.0",
-  "ts-node": "^10.9.0"
+  "vitest": "^1.0.0"
 }
 ```
 
-### Fase 2 - Frontend
+### Fase 2 - Frontend (JavaScript Vanilla)
 ```json
 {
-  "react": "^18.2.0",
-  "react-dom": "^18.2.0",
-  "react-router-dom": "^6.0.0",
   "vite": "^5.0.0",
-  "typescript": "^5.0.0",
-  "tailwindcss": "^3.3.0",
-  "zustand": "^4.4.0",
-  "axios": "^1.6.0",
-  "zod": "^3.22.0",
   "vitest": "^1.0.0",
-  "@testing-library/react": "^14.0.0"
+  "@testing-library/dom": "^9.3.0",
+  "jsdom": "^23.0.0"
 }
 ```
+
+**Observações:**
+- Sem TypeScript: projeto totalmente em JavaScript
+- Sem Tailwind/UI libs: CSS puro com variáveis
+- Sem Zustand/Redux: State management nativo
+- Sem Axios: Fetch API nativa
+- Sem React Router: History API nativa
 
 ---
 
 ## 🎯 DEFINIÇÕES DE PRONTO (DoD)
 
 ### Backend Feature
-- [ ] Código escrito
+- [ ] Código escrito em JavaScript
 - [ ] Testes escritos (unit + integration)
 - [ ] Testes passando
 - [ ] Code review aprovado
-- [ ] Linting passando
+- [ ] Linting passando (ESLint)
 - [ ] Documentado (JSDoc + API docs)
 - [ ] Sem console.logs ou debugs
 - [ ] Performance aceitável
 - [ ] Segurança validada
 
 ### Frontend Feature
-- [ ] Código escrito
-- [ ] Testes escritos (unit + integration)
+- [ ] Código escrito em JavaScript
+- [ ] Componentes modulares
+- [ ] Testes escritos
 - [ ] Testes passando
 - [ ] Responsivo (mobile + desktop)
-- [ ] Acessível (WCAG AA)
+- [ ] Acessível (semântico)
 - [ ] Code review aprovado
 - [ ] Linting passando
 - [ ] Documentado
 - [ ] Performance aceitável
-- [ ] E2E test criado
 
 ---
 
@@ -334,33 +326,37 @@
 
 | Risco | Probabilidade | Impacto | Mitigação |
 |-------|---------------|--------|-----------|
-| Atraso na entrega | Média | Alto | Sprints curtas de 1 semana |
-| Segurança inadequada | Baixa | Crítico | Security audit ao final de cada fase |
-| Performance insuficiente | Baixa | Médio | Load testing ao final |
-| Bugs em produção | Média | Alto | Testes automáticos > 85% coverage |
+| Atraso na entrega | Média | Alto | Sprints curtas, escopo enxuto |
+| Segurança inadequada | Baixa | Crítico | Auditoria de segurança ao final |
+| Performance insuficiente | Baixa | Médio | Testes de performance |
+| Bugs em produção | Média | Alto | Testes > 80% coverage |
+| Dificuldade sem frameworks | Média | Médio | Arquitetura componentizada |
+| Manutenção complexa | Baixa | Médio | Documentação e padrões claros |
 
 ---
 
 ## 📅 ROADMAP VISUAL
 
 ```
-Semana 1-3:  |████░░░░░░░░░░░░░░░| Backend base (30%)
-Semana 4-6:  |░░░████░░░░░░░░░░░░| Frontend (30%)
-Semana 7-8:  |░░░░░░░████░░░░░░░░| Features (30%)
-Semana 9-10: |░░░░░░░░░░░████░░░░| Deploy + Polish (10%)
-             Data: 27 fev - 15 abr
+Semana 1-2:  |████░░░░░░░░░░░| Backend base (Fastify + Auth)
+Semana 3-4:  |░░░░████░░░░░░░| Frontend (Componentes JS)
+Semana 5-6:  |░░░░░░░░████░░░| Features (CRUD + Dashboard)
+Semana 7-8:  |░░░░░░░░░░░░███| Testes + Deploy
+             TCC Curso Técnico - 2 meses
 ```
 
 ---
 
 ## 📝 NOTAS IMPORTANTES
 
-1. **Nada foi implementado ainda** - Este é apenas o plano
-2. **Datas são estimativas** - Podem variar
-3. **Prioridade pode mudar** - Baseado em feedback
-4. **Testes são obrigatórios** - Em cada feature
-5. **Code review é mandatório** - Antes de merge
-6. **Documentação acompanha código** - Não é bônus
+1. **Projeto em JavaScript Vanilla** - Sem TypeScript, foco em funcionalidade
+2. **Fastify no backend** - Framework rápido e moderno mantido
+3. **Sem Docker** - Não será usado neste TCC
+4. **Componentes modulares** - Arquitetura como React, mas em JS puro
+5. **Testes são importantes** - Garantem qualidade do código
+6. **Deploy simples** - Render/Railway/Vercel (plano free)
+7. **React é opcional** - Possível migração futura, não obrigatório
+8. **Foco em funcionalidade** - Sistema deve funcionar para o TCC
 
 ---
 

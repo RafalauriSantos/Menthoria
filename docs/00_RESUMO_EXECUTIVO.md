@@ -28,21 +28,31 @@ Transformar Menthoria de um **site estático de demonstração** em uma **plataf
 
 ## ✅ SOLUÇÃO PROPOSTA
 
-### Stack Recomendado
+### Stack Adotada (TCC Curso Técnico)
 ```
-Backend:   Fastify + PostgreSQL + Prisma + TypeScript
-Frontend:  React + Vite + TypeScript + Tailwind
-DevOps:    Docker + GitHub Actions + Monitoring
-Testing:   Jest/Vitest + React Testing Library + Cypress
+Backend:   Node.js + Fastify + PostgreSQL + JavaScript
+Frontend:  JavaScript Vanilla (arquitetura componentizada)
+Testing:   Vitest + DOM Testing
+Futuro:    Migração para React (opcional)
 ```
+
+**Decisões Técnicas:**
+- ✅ **JavaScript puro** - Sem TypeScript (mais acessível para TCC)
+- ✅ **Fastify backend** - Framework rápido e moderno para APIs
+- ✅ **Sem Docker** - Não será abordado no curso
+- ✅ **Componentes JS** - Arquitetura modular como React, mas em vanilla JS
+- ✅ **Funcional primeiro** - Foco em entregar um sistema que funciona
+- 🔮 **React depois** - Possível migração futura (não obrigatório)
 
 ### Estrutura
 ```
-monorepo/
-├── backend/     (Fastify API)
-├── frontend/    (React App)
-├── docker-compose.yml
-└── docs/
+Menthoria/
+├── backend/           (API Node.js + Fastify)
+├── login/             (Sistema de login)
+├── landing-page/      (Páginas institucionais)
+├── themes/            (Sistema de temas)
+├── __tests__/         (Testes)
+└── docs/              (Documentação)
 ```
 
 ---
@@ -60,47 +70,47 @@ monorepo/
 
 ---
 
-## ⏱️ ESTIMATIVA DE TEMPO
+## ⏱️ ESTIMATIVA DE TEMPO (TCC)
 
 ```
-Fase 1: Backend Base             → 3 semanas
-Fase 2: Frontend Base            → 3 semanas  
-Fase 3: Features Principais      → 3 semanas
-Fase 4: DevOps + Deployment      → 2 semanas
+Fase 1: Backend API              → 2 semanas
+Fase 2: Frontend Componentes     → 2 semanas  
+Fase 3: Features Principais      → 2 semanas
+Fase 4: Testes + Deploy          → 1-2 semanas
                         ─────────────
-Total                           8-10 semanas
+Total                           7-8 semanas
 ```
 
-**Com 1 dev:** 2 meses  
-**Com 2 devs:** 6-8 semanas  
+**Com 2-3 integrantes:** 6-8 semanas  
+**Escopo:** Sistema funcional para TCC de curso técnico  
 
 ---
 
-## 💰 INVESTIMENTO
+## 💰 INVESTIMENTO (TCC)
 
-### Ferramentas (Uma vez)
+### Ferramentas (100% Gratuitas)
 ```
-✅ Ferramentas gratuitas/open-source:
-   - Fastify, React, PostgreSQL, Docker
-   - GitHub (gratuito para públicos)
-   
-⚠️ Opcionais pagos:
-   - Sentry (monitoramento): $29/mês
-   - DataDog (logs): $15/host/mês
-   - Deploy (Render/Railway): $7-15/mês
+✅ Tudo gratuito/open-source:
+   - Node.js, Fastify, PostgreSQL
+   - JavaScript vanilla
+   - GitHub (gratuito)
+   - Render/Railway (plano free)
+   - Vitest (testes)
 ```
 
-### Estimativa de Custo Desenvolvimento
+### Custo para TCC
 ```
-1 dev   x 10 semanas x $5000/semana = $50,000
-2 devs  x  6 semanas x $5000/semana = $60,000
+💰 Custo total: R$ 0,00
+⏰ Tempo: 7-8 semanas (2-3 integrantes)
+🎓 Objetivo: TCC funcional de curso técnico
 ```
 
-**ROI:**
-- Reduz bugs em produção em 70%
-- Reduz tempo de manutenção em 50%
-- Permite crescimento infinito
-- Aumenta confiança de clientes/investidores
+**Benefícios para TCC:**
+- ✅ Sistema real e funcional
+- ✅ Portfolio profissional
+- ✅ Aprendizado de arquitetura moderna
+- ✅ Base sólida para evoluções futuras
+- 🔮 Possível migração para React depois
 
 ---
 
