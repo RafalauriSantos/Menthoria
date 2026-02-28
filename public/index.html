@@ -3,8 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Menthoria - Plataforma de Educação Inclusiva. Offline-first, mobile-first.">
+    <meta name="theme-color" content="#4A90E2">
     <title>Menthoria | Educação Inclusiva</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/img/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Menthoria">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,10 +25,14 @@
         rel="stylesheet">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="mobile-first.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="themes/themes.css">
     <link rel="stylesheet" href="landing-page/home/home.css">
 
+    <!-- PWA Manager (carrega primeiro) -->
+    <script src="pwa-manager.js" defer></script>
+    
     <!-- JavaScript -->
     <script src="index.js" defer></script>
     <!-- <script src="/themes/themes.js" defer></script> -->

@@ -1,22 +1,27 @@
 {
   "name": "menthoria",
   "version": "1.0.0",
-  "description": "Menthoria - Educação Inclusiva",
-  "main": "index.js",
+  "description": "Menthoria - Plataforma de Educação Inclusiva (TCC)",
   "type": "module",
   "scripts": {
-    "dev": "http-server -p 3000 -o -c-1",
+    "dev": "http-server public -p 3000 -o -c-1",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:all": "npm run dev & npm run dev:backend",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "backend:install": "cd backend && npm install",
+    "install:all": "npm install && npm run backend:install"
   },
   "keywords": [
     "educação",
     "inclusão",
-    "acessibilidade"
+    "acessibilidade",
+    "fastify",
+    "javascript"
   ],
-  "author": "Felipotsz, Rafael Lauri,Rafael Silveira, Kaiky Gay",
+  "author": "Felipotsz, Rafael Lauri, Rafael Silveira, Kaiky Gay",
   "license": "MIT",
   "devDependencies": {
     "@vitest/coverage-v8": "^1.0.0",

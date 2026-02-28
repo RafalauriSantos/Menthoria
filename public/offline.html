@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Menthoria</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: white;
+    }
+
+    .offline-container {
+      text-align: center;
+      max-width: 500px;
+    }
+
+    .offline-icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .retry-button {
+      background: white;
+      color: #667eea;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .retry-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .retry-button:active {
+      transform: translateY(0);
+    }
+
+    .status {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .online-indicator {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ef4444;
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+
+    .online-indicator.online {
+      background: #10b981;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+      
+      .offline-icon {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="offline-container">
+    <div class="offline-icon">📡</div>
+    <h1>Você está offline</h1>
+    <p>
+      Não foi possível conectar ao servidor. 
+      Verifique sua conexão com a internet e tente novamente.
+    </p>
+    <button class="retry-button" onclick="retryConnection()">
+      Tentar Novamente
+    </button>
+    <div class="status">
+      <span class="online-indicator" id="indicator"></span>
+      <span id="status-text">Sem conexão</span>
+    </div>
+  </div>
+
+  <script>
+    const indicator = document.getElementById('indicator');
+    const statusText = document.getElementById('status-text');
+
+    // Monitora status da conexão
+    function updateConnectionStatus() {
+      if (navigator.onLine) {
+        indicator.classList.add('online');
+        statusText.textContent = 'Conectado - Clique para continuar';
+      } else {
+        indicator.classList.remove('online');
+        statusText.textContent = 'Sem conexão';
+      }
+    }
+
+    // Tenta reconectar
+    function retryConnection() {
+      if (navigator.onLine) {
+        window.location.href = '/';
+      } else {
+        alert('Você ainda está offline. Conecte-se à internet e tente novamente.');
+      }
+    }
+
+    // Escuta mudanças de conexão
+    window.addEventListener('online', () => {
+      updateConnectionStatus();
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 1000);
+    });
+
+    window.addEventListener('offline', updateConnectionStatus);
+
+    // Atualiza status inicial
+    updateConnectionStatus();
+
+    // Verifica conexão periodicamente
+    setInterval(updateConnectionStatus, 3000);
+  </script>
+</body>
+</html>

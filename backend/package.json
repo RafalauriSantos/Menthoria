@@ -1,0 +1,36 @@
+{
+  "name": "menthoria-backend",
+  "version": "1.0.0",
+  "description": "Menthoria Backend API - Fastify",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "fastify",
+    "api",
+    "backend",
+    "educação"
+  ],
+  "author": "Felipotsz, Rafael Lauri, Rafael Silveira, Kaiky Gay",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.25.0",
+    "@fastify/cors": "^8.4.0",
+    "@fastify/jwt": "^7.2.0",
+    "dotenv": "^16.3.1",
+    "bcrypt": "^5.1.0",
+    "zod": "^3.22.0",
+    "pino": "^8.16.0",
+    "pino-pretty": "^10.2.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
+  }
+}
