@@ -88,8 +88,18 @@ function inicializarListeners() {
     // Validação em tempo real
     const camposInput = document.querySelectorAll('.form-input');
     camposInput.forEach(input => {
-        input.addEventListener('blur', validarCampo);
-        input.addEventListener('input', limparErroDoCampo);
+        // Marca campo como 'tocado' quando usuário digitar
+        input.addEventListener('input', function() {
+            input.dataset.touched = 'true';
+            limparErroDoCampo({ target: input });
+        });
+        
+        // Só valida se o usuário já interagiu com o campo
+        input.addEventListener('blur', function(e) {
+            if (e.target.dataset.touched === 'true') {
+                validarCampo(e);
+            }
+        });
     });
 
     // Links para alternar entre formulários
